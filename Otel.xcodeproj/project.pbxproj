@@ -12,6 +12,7 @@
 		8476F5A02AAF384F000AF0E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8476F59F2AAF384F000AF0E2 /* Assets.xcassets */; };
 		8476F5A32AAF384F000AF0E2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8476F5A22AAF384F000AF0E2 /* Preview Assets.xcassets */; };
 		84936AAF2AAF41B100F05AAE /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936AAE2AAF41B100F05AAE /* Fonts.swift */; };
+		84936AB22AAF49F500F05AAE /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936AB12AAF49F500F05AAE /* Images.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8476F59F2AAF384F000AF0E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8476F5A22AAF384F000AF0E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84936AAE2AAF41B100F05AAE /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		84936AB12AAF49F500F05AAE /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				84936AAE2AAF41B100F05AAE /* Fonts.swift */,
+				84936AB12AAF49F500F05AAE /* Images.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8476F59E2AAF384D000AF0E2 /* ContentView.swift in Sources */,
+				84936AB22AAF49F500F05AAE /* Images.swift in Sources */,
 				84936AAF2AAF41B100F05AAE /* Fonts.swift in Sources */,
 				8476F59C2AAF384D000AF0E2 /* OtelApp.swift in Sources */,
 			);
