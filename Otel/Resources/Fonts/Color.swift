@@ -10,42 +10,40 @@ import SwiftUI
 extension Color {
     enum Project {
         enum Yellow {
-            static let light = Color(hex: "#FFC70033").opacity(0.2)
-            static let regular = Color(hex: "#FFA800")
+            static let light = Color(hex: 0xFFC700).opacity(0.2)
+            static let regular = Color(hex: 0xFFA800)
         }
         
         enum Blue {
-            static let light = Color(hex: "#0D72FF1A").opacity(0.1)
-            static let regular = Color(hex: "#0D72FF")
+            static let light = Color(hex: 0x0D72FF).opacity(0.1)
+            static let regular = Color(hex: 0x0D72FF)
         }
         
         enum Gray {
-            static let text = Color(hex: "#828796")
-            static let cellBackground = Color(hex: "#FBFBFC")
-            static let background = Color(hex: "#F6F6F9")
+            static let text = Color(hex: 0x828796)
+            static let cellBackground = Color(hex: 0xFBFBFC)
+            static let background = Color(hex: 0xF6F6F9)
         }
         
         enum Black {
-            static let regular = Color(hex: "#000000")
-            static let darkest = Color(hex: "#000000").opacity(0.22)
-            static let dark = Color(hex: "#000000").opacity(0.17)
-            static let light = Color(hex: "#000000").opacity(0.1)
-            static let lightest = Color(hex: "#000000").opacity(0.05)
+            static let regular = Color(hex: 0x000000)
+            static let text = Color(hex: 0x000000).opacity(0.9)
+            static let darkest = Color(hex: 0x000000).opacity(0.22)
+            static let dark = Color(hex: 0x000000).opacity(0.17)
+            static let light = Color(hex: 0x000000).opacity(0.1)
+            static let lightest = Color(hex: 0x000000).opacity(0.05)
         }
-        static let white = Color(hex: "#FFFFFF")
+        static let white = Color(hex: 0xFFFFFF)
     }
 }
 
 private extension Color {
-    init(hex: String) {
-        let scanner = Scanner(string: hex)
-        var rgbValue: UInt64 = 0
-        scanner.scanHexInt64(&rgbValue)
-        
-        let red = Double((rgbValue & 0xFF0000) >> 16) / 255.0
-        let green = Double((rgbValue & 0x00FF00) >> 8) / 255.0
-        let blue = Double(rgbValue & 0x0000FF) / 255.0
-        
-        self.init(red: red, green: green, blue: blue)
-    }
-}
+    init(hex: UInt) {
+        self.init(
+            .sRGB,
+            red: Double((hex >> 16) & 0xFF) / 255.0,
+            green: Double((hex >> 8) & 0xFF) / 255.0,
+            blue: Double(hex & 0xFF) / 255.0,
+            opacity: 1.0
+        )
+    }}
