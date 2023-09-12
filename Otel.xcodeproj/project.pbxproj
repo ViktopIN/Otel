@@ -14,17 +14,25 @@
 		84936AAF2AAF41B100F05AAE /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936AAE2AAF41B100F05AAE /* Fonts.swift */; };
 		84936AB22AAF49F500F05AAE /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936AB12AAF49F500F05AAE /* Images.swift */; };
 		84936AB52AAF4AB900F05AAE /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936AB42AAF4AB900F05AAE /* Color.swift */; };
+		84936ABF2AAF55E300F05AAE /* CarouselIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936ABE2AAF55E300F05AAE /* CarouselIndicatorView.swift */; };
+		84936AC12AAF57AC00F05AAE /* CircleIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936AC02AAF57AC00F05AAE /* CircleIndicatorView.swift */; };
+		84936AC42AAF57DF00F05AAE /* Shape + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936AC32AAF57DF00F05AAE /* Shape + Extension.swift */; };
+		84936AC62AAF722400F05AAE /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84936AC52AAF722400F05AAE /* CarouselView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8476F5982AAF384D000AF0E2 /* Otel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Otel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8476F59B2AAF384D000AF0E2 /* OtelApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtelApp.swift; sourceTree = "<group>"; };
 		8476F59D2AAF384D000AF0E2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		8476F59F2AAF384F000AF0E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8476F59F2AAF384F000AF0E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		8476F5A22AAF384F000AF0E2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84936AAE2AAF41B100F05AAE /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		84936AB12AAF49F500F05AAE /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		84936AB42AAF4AB900F05AAE /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		84936ABE2AAF55E300F05AAE /* CarouselIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselIndicatorView.swift; sourceTree = "<group>"; };
+		84936AC02AAF57AC00F05AAE /* CircleIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleIndicatorView.swift; sourceTree = "<group>"; };
+		84936AC32AAF57DF00F05AAE /* Shape + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Shape + Extension.swift"; sourceTree = "<group>"; };
+		84936AC52AAF722400F05AAE /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,11 +65,9 @@
 		8476F59A2AAF384D000AF0E2 /* Otel */ = {
 			isa = PBXGroup;
 			children = (
+				84936ABA2AAF54F700F05AAE /* Sources */,
 				84936AAC2AAF419A00F05AAE /* Resources */,
-				8476F59B2AAF384D000AF0E2 /* OtelApp.swift */,
 				8476F59D2AAF384D000AF0E2 /* ContentView.swift */,
-				8476F59F2AAF384F000AF0E2 /* Assets.xcassets */,
-				8476F5A12AAF384F000AF0E2 /* Preview Content */,
 			);
 			path = Otel;
 			sourceTree = "<group>";
@@ -71,25 +77,64 @@
 			children = (
 				8476F5A22AAF384F000AF0E2 /* Preview Assets.xcassets */,
 			);
-			path = "Preview Content";
+			name = "Preview Content";
+			path = "../Preview Content";
 			sourceTree = "<group>";
 		};
 		84936AAC2AAF419A00F05AAE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				84936AAD2AAF41A300F05AAE /* Fonts */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		84936AAD2AAF41A300F05AAE /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
+				8476F59F2AAF384F000AF0E2 /* Assets.xcassets */,
+				8476F5A12AAF384F000AF0E2 /* Preview Content */,
 				84936AAE2AAF41B100F05AAE /* Fonts.swift */,
 				84936AB12AAF49F500F05AAE /* Images.swift */,
 				84936AB42AAF4AB900F05AAE /* Color.swift */,
 			);
-			path = Fonts;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		84936ABA2AAF54F700F05AAE /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				84936AC22AAF57CA00F05AAE /* Helpers */,
+				84936ABB2AAF54FF00F05AAE /* CommonViews */,
+				8476F59B2AAF384D000AF0E2 /* OtelApp.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		84936ABB2AAF54FF00F05AAE /* CommonViews */ = {
+			isa = PBXGroup;
+			children = (
+				84936ABC2AAF550800F05AAE /* Carousel */,
+			);
+			path = CommonViews;
+			sourceTree = "<group>";
+		};
+		84936ABC2AAF550800F05AAE /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				84936ABD2AAF55C900F05AAE /* Indicator */,
+				84936AC52AAF722400F05AAE /* CarouselView.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		84936ABD2AAF55C900F05AAE /* Indicator */ = {
+			isa = PBXGroup;
+			children = (
+				84936ABE2AAF55E300F05AAE /* CarouselIndicatorView.swift */,
+				84936AC02AAF57AC00F05AAE /* CircleIndicatorView.swift */,
+			);
+			path = Indicator;
+			sourceTree = "<group>";
+		};
+		84936AC22AAF57CA00F05AAE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				84936AC32AAF57DF00F05AAE /* Shape + Extension.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,8 +209,12 @@
 			files = (
 				8476F59E2AAF384D000AF0E2 /* ContentView.swift in Sources */,
 				84936AB22AAF49F500F05AAE /* Images.swift in Sources */,
+				84936AC62AAF722400F05AAE /* CarouselView.swift in Sources */,
+				84936ABF2AAF55E300F05AAE /* CarouselIndicatorView.swift in Sources */,
 				84936AAF2AAF41B100F05AAE /* Fonts.swift in Sources */,
+				84936AC42AAF57DF00F05AAE /* Shape + Extension.swift in Sources */,
 				84936AB52AAF4AB900F05AAE /* Color.swift in Sources */,
+				84936AC12AAF57AC00F05AAE /* CircleIndicatorView.swift in Sources */,
 				8476F59C2AAF384D000AF0E2 /* OtelApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
