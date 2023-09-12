@@ -10,15 +10,16 @@ import SwiftUI
 struct CarouselView: View {
     
     @State var selection = 0
-    let images = ["img", "img", "img"]
+    let images = ["img", "img", "img", "img", "img", "img"]
     
     var body: some View {
         ZStack {
             TabView(selection: $selection) {
-                ForEach(images, id: \.self) {
-                    image in
+                ForEach(Array(images.enumerated()), id: \.0) {
+                    index, image in
                     
                     Image(image)
+                        .tag(index)
                 }
             }
             .tabViewStyle(.page(indexDisplayMode: .never))
