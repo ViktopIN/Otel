@@ -92,7 +92,7 @@ struct HighlightSignView: View {
             case .optionality(text: _):
                 return (property == .textColor
                     ? Color.Project.Gray.text
-                    : Color.Project.Gray.background) as? T
+                    : Color.Project.Gray.cellBackground) as? T
             case .detail:
                 return (property == .textColor
                     ? Color.Project.Blue.regular
@@ -105,7 +105,7 @@ struct HighlightSignView: View {
 
 struct RatingView_Previews: PreviewProvider {
     static var previews: some View {
-        HighlightSignView(type: .rating)
+        HighlightSignView(type: .optionality(text: "ну что сказать"))
     }
 }
 
