@@ -25,7 +25,10 @@ struct CarouselView: View {
             .tabViewStyle(.page(indexDisplayMode: .never))
             VStack(alignment: .center) {
                 Spacer()
-                CarouselIndicatorView(indicatorNumber: images.count, selectionTabNumber: $selection)
+                CarouselIndicatorView(
+                    indicatorNumber: images.count, 
+                    selectionTabNumber: $selection
+                )
                     .padding(
                         .bottom,
                         Constants.carouselIndicatorViewBottomPadding

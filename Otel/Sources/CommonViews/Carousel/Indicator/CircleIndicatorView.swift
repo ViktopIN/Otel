@@ -20,7 +20,7 @@ struct CircleIndicatorView: View {
     @Binding var indicatorColorType: IndicatorColorType
     var body: some View {
         Circle()
-            .frame(value: 7)
+            .frame(value: Constants.viewDiameter)
             .foregroundColor(getColor())
     }
     
@@ -47,4 +47,8 @@ struct CircleIndicatorView_Previews: PreviewProvider {
     static var previews: some View {
         CircleIndicatorView(indicatorColorType: CircleIndicatorView_Previews.$indicatorColorType)
     }
+}
+
+private enum Constants {
+    static let viewDiameter: CGFloat = 7
 }
