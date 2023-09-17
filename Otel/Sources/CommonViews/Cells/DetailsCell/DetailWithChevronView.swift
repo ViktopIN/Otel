@@ -1,5 +1,5 @@
 //
-//  DetailsCell.swift
+//  DetailWithChevronView.swift
 //  Otel
 //
 //  Created by Виктор on 13.09.2023.
@@ -7,22 +7,29 @@
 
 import SwiftUI
 
-struct DetailsCellViewModel {
+struct DetailWithChevronViewModel: Hashable {
     let image: Image
     let title: String
     let subTitle: String
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(title)
+    }
 }
 
-struct DetailsCell: View {
-    let detailsCellViewModel: DetailsCellViewModel
+struct DetailWithChevronView: View {
+    let detailWithChevronViewModel: DetailWithChevronViewModel
     
+    init(viewModel: DetailWithChevronViewModel) {
+        self.detailWithChevronViewModel = viewModel
+    }
     
     var body: some View {
         HStack(
             alignment: .center,
-            spacing: Constants.detailsCellHStackSpacing
+            spacing: Constants.detailHStackSpacing
         ) {
-            detailsCellViewModel.image
+            detailWithChevronViewModel.image
                 .resizable()
                 .frame(
                     width: Constants.imageSizeValue,
@@ -30,12 +37,12 @@ struct DetailsCell: View {
                 )
             VStack(
                 alignment: .leading,
-                spacing: Constants.detailsCellTextStackSpacing
+                spacing: Constants.detailTextStackSpacing
             ) {
-                Text(detailsCellViewModel.title)
+                Text(detailWithChevronViewModel.title)
                     .font(Font.Project.hedline3)
                     .foregroundColor(Color.Project.Black.regular)
-                Text(detailsCellViewModel.subTitle)
+                Text(detailWithChevronViewModel.subTitle)
                     .font(Font.Project.subtitle)
                     .foregroundColor(Color.Project.Gray.text)
             }
@@ -56,10 +63,10 @@ struct DetailsCell: View {
     }
 }
 
-struct DetailsCell_Previews: PreviewProvider {
+struct DetailWithChevronView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsCell(
-            detailsCellViewModel: DetailsCellViewModel(
+        DetailWithChevronView(
+            viewModel: DetailWithChevronViewModel(
                 image: Image.Icons.emojiHappy,
                 title: "Удобства",
                 subTitle: "Самое необходимое"
@@ -69,8 +76,8 @@ struct DetailsCell_Previews: PreviewProvider {
 }
 
 private enum Constants {
-    static let detailsCellTextStackSpacing: CGFloat = 2
-    static let detailsCellHStackSpacing: CGFloat = 12
+    static let detailTextStackSpacing: CGFloat = 2
+    static let detailHStackSpacing: CGFloat = 12
     static let imageSizeValue: CGFloat = 24
     static let chevronSize = CGSize(width: 6, height: 12)
     static let chevronEdgeInsets = EdgeInsets(

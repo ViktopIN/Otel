@@ -23,6 +23,7 @@ extension Color {
             static let text = Color(hex: 0x828796)
             static let cellBackground = Color(hex: 0xFBFBFC)
             static let background = Color(hex: 0xF6F6F9)
+            static let divider = Color(hex: 0x828796).opacity(0.15)
         }
         
         enum Black {

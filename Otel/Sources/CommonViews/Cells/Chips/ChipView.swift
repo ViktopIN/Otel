@@ -1,5 +1,5 @@
 //
-//  HighlightSignView.swift
+//  ChipView.swift
 //  Otel
 //
 //  Created by Виктор on 13.09.2023.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct HighlightSignView: View {
-    enum HighlightType: Equatable {
+struct ChipView: View {
+    enum ChipViewType: Equatable {
         case rating
         case optionality(text: String)
         case detail
@@ -20,7 +20,7 @@ struct HighlightSignView: View {
         case backgroundColor
     }
     
-    let type: HighlightType
+    let type: ChipViewType
     
     var body: some View {
         HStack(spacing: Constants.hStackSpacing) {
@@ -42,6 +42,8 @@ struct HighlightSignView: View {
                         for: .textColor
                     )
                 )
+                .lineLimit(Constants.textLineLimit)
+                .fixedSize(horizontal: true, vertical: true)
             if type == .detail {
                 Image.Icons.chevronRight
                     .foregroundColor(Color.Project.Blue.regular)
@@ -103,9 +105,9 @@ struct HighlightSignView: View {
     }
 }
 
-struct RatingView_Previews: PreviewProvider {
+struct ChipView_Previews: PreviewProvider {
     static var previews: some View {
-        HighlightSignView(type: .optionality(text: "ну что сказать"))
+        ChipView(type: .optionality(text: "ну что сказать"))
     }
 }
 
@@ -114,6 +116,7 @@ private enum Constants {
     static let imageHeight: CGFloat = 15
     static let textHorizontalPadding: CGFloat = 10
     static let textVerticalPadding: CGFloat = 5
+    static let textLineLimit = 1
     static let viewCornerRadius: CGFloat = 5
     static let chevronSize = CGSize(width: 6, height: 12)
     static let chevronEdgeInsets = EdgeInsets(
