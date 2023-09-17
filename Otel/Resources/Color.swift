@@ -24,6 +24,7 @@ extension Color {
             static let cellBackground = Color(hex: 0xFBFBFC)
             static let background = Color(hex: 0xF6F6F9)
             static let divider = Color(hex: 0x828796).opacity(0.15)
+            static let barShadowStroke = Color(hex: 0xE8E9EC)
         }
         
         enum Black {

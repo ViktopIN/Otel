@@ -22,6 +22,8 @@
 		84958ECC2AB1F13100973545 /* DetailWithChevronView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84958ECB2AB1F13100973545 /* DetailWithChevronView.swift */; };
 		84958ECF2AB1F8D500973545 /* DetailsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84958ECE2AB1F8D500973545 /* DetailsViewCell.swift */; };
 		84958ED22AB1FEDE00973545 /* ChipsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84958ED12AB1FEDE00973545 /* ChipsCell.swift */; };
+		84CA4C6E2AB719C8009111DE /* ActionBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4C6D2AB719C8009111DE /* ActionBar.swift */; };
+		84CA4C702AB719DE009111DE /* ActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CA4C6F2AB719DE009111DE /* ActionButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		84958ECB2AB1F13100973545 /* DetailWithChevronView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWithChevronView.swift; sourceTree = "<group>"; };
 		84958ECE2AB1F8D500973545 /* DetailsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewCell.swift; sourceTree = "<group>"; };
 		84958ED12AB1FEDE00973545 /* ChipsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChipsCell.swift; sourceTree = "<group>"; };
+		84CA4C6D2AB719C8009111DE /* ActionBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionBar.swift; sourceTree = "<group>"; };
+		84CA4C6F2AB719DE009111DE /* ActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,7 @@
 		84936ABB2AAF54FF00F05AAE /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
+				84CA4C712AB71BF3009111DE /* Buttons */,
 				84958ECA2AB1F0CC00973545 /* Cells */,
 				84936ABC2AAF550800F05AAE /* Carousel */,
 			);
@@ -160,6 +165,7 @@
 			children = (
 				84936AC92AB12B8E00F05AAE /* Chips */,
 				84958ECD2AB1F7D000973545 /* DetailsCell */,
+				84CA4C6D2AB719C8009111DE /* ActionBar.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -171,6 +177,14 @@
 				84958ECE2AB1F8D500973545 /* DetailsViewCell.swift */,
 			);
 			path = DetailsCell;
+			sourceTree = "<group>";
+		};
+		84CA4C712AB71BF3009111DE /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				84CA4C6F2AB719DE009111DE /* ActionButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +262,7 @@
 				84936AC62AAF722400F05AAE /* CarouselView.swift in Sources */,
 				84936AC82AB12B8600F05AAE /* ChipView.swift in Sources */,
 				84936ABF2AAF55E300F05AAE /* CarouselIndicatorView.swift in Sources */,
+				84CA4C6E2AB719C8009111DE /* ActionBar.swift in Sources */,
 				84958ECF2AB1F8D500973545 /* DetailsViewCell.swift in Sources */,
 				84936AAF2AAF41B100F05AAE /* Fonts.swift in Sources */,
 				84958ECC2AB1F13100973545 /* DetailWithChevronView.swift in Sources */,
@@ -256,6 +271,7 @@
 				84936AC12AAF57AC00F05AAE /* CircleIndicatorView.swift in Sources */,
 				8476F59C2AAF384D000AF0E2 /* OtelApp.swift in Sources */,
 				84958ED22AB1FEDE00973545 /* ChipsCell.swift in Sources */,
+				84CA4C702AB719DE009111DE /* ActionButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
