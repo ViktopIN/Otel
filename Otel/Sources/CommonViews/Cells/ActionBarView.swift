@@ -1,5 +1,5 @@
 //
-//  ActionBar.swift
+//  ActionBarView.swift
 //  Otel
 //
 //  Created by Виктор on 17.09.2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ActionBar: View {
+struct ActionBarView: View {
     let buttonTitle: String
     var body: some View {
         ActionButton(title: buttonTitle)
@@ -37,9 +37,9 @@ struct ActionBar: View {
     }
 }
 
-struct ActionBar_Previews: PreviewProvider {
+struct ActionBarView_Previews: PreviewProvider {
     static var previews: some View {
-        ActionBar(buttonTitle: "К выбору номера")
+        ActionBarView(buttonTitle: "К выбору номера")
     }
 }
 
